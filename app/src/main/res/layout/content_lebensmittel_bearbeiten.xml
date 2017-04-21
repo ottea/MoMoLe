@@ -80,4 +80,12 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="422dp" />
 
+    <Button
+        android:id="@+id/button_lebensmittel_abbrechen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Abbrechen"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="422dp" />
+
 </android.support.constraint.ConstraintLayout>

@@ -11,7 +11,7 @@ public class content_lebensmittel_bearbeiten extends {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_lebensmittel_bearbeiten);
 
-        findViewById(R.id.paymentCancelButton).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.button_lebensmittel_speichern).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
