@@ -32,5 +32,6 @@
         android:layout_height="37dp"
         android:text="Kategorie"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="135dp" />
+        tools:layout_editor_absoluteY="127dp" />
+
 </android.support.constraint.ConstraintLayout>
