@@ -11,7 +11,7 @@ public class content_lebensmittel_bearbeiten extends {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_lebensmittel_bearbeiten);
 
-        findViewById(R.id.button_lebensmittel_speichern).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.button_lebensmittel_abbrechen).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
@@ -37,7 +37,7 @@ public class content_lebensmittel_bearbeiten extends {
             }
         });
 
-        findViewById(R.id.paymentSaveButton).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.button_lebensmittel_speichern).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String cat = ((TextView) findViewById(R.id.paymentInputCategory)).getText().toString();
