@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/input_lebensmittel_bezeichnung"
         android:layout_width="353dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -17,7 +17,7 @@
         tools:layout_editor_absoluteY="14dp" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/input_lebensmittel_uhrzeit"
         android:layout_width="353dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -27,7 +27,7 @@
         tools:layout_editor_absoluteY="81dp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/text_lebensmittel_kategorie"
         android:layout_width="113dp"
         android:layout_height="37dp"
         android:ems="10"
@@ -73,7 +73,7 @@
         tools:layout_editor_absoluteY="364dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_lebensmittel_speichern"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Speichern"
