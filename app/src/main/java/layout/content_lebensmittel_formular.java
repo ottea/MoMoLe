@@ -17,36 +17,12 @@ public class content_lebensmittel_formular extends Fragment {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_lebensmittel_bearbeiten);
 
-        findViewById(R.id.button_lebensmittel_abbrechen).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        switch (which){
-                            case DialogInterface.BUTTON_POSITIVE:
-                                finish();
-                                break;
-
-                            case DialogInterface.BUTTON_NEGATIVE:
-                                //do nothing, stay on page
-                                break;
-                        }
-                    }
-                };
-                AlertDialog.Builder builder = new AlertDialog.Builder(PaymentActivity.this);
-                builder.setMessage(R.string.confirm_question);
-                builder.setPositiveButton(R.string.yes, dialogClickListener);
-                builder.setNegativeButton(R.string.no, dialogClickListener);
-                builder.show();
-            }
-        });
-
         findViewById(R.id.button_lebensmittel_speichern).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String cat = ((TextView) findViewById(R.id.paymentInputCategory)).getText().toString();
-                String amount = ((TextView) findViewById(R.id.paymentInputAmount)).getText().toString();
+                String bezeichnung = ((TextView) findViewById(R.id.input_lebensmittel_bezeichnung)).getText().toString();
+                String uhrzeit = ((TextView) findViewById(R.id.input_lebensmittel_uhrzeit)).getText().toString();
+                String kategorie1 = ((TextView) findViewById(R.id.paymentInputCategory)).getText().toString();
                 double paid;
                 if (amount.length() > 0) {
                     try {
