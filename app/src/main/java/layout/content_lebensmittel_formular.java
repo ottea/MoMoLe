@@ -24,13 +24,13 @@ public class content_lebensmittel_formular extends Fragment {
                 String uhrzeit = ((TextView) findViewById(R.id.input_lebensmittel_uhrzeit)).getText().toString();
                 String kategorie1 = ((TextView) findViewById(R.id.paymentInputCategory)).getText().toString();
                 double paid;
-                if (amount.length() > 0) {
+                if (uhrzeit.length() != 0) {
                     try {
                         paid = Double.parseDouble(amount);
-                        Payment payment = new Payment();
-                        payment.setAmount(paid);
-                        payment.setCategory(cat);
-                        payment.setTime(System.currentTimeMillis());
+                        Lebensmittel lebensmittel = new Lebensmittel();
+                        lebensmittel.setBezeichnung(bezeichnung);
+                        lebensmittel.setUhrzeit(uhrzeit);
+                        lebensmittel.setTime(System.currentTimeMillis());
                         PaymentDAO.getInstance(PaymentActivity.this).addPayment(payment);
                         Toast.makeText(PaymentActivity.this, R.string.save_payment_message, Toast.LENGTH_SHORT).show();
                         finish();
