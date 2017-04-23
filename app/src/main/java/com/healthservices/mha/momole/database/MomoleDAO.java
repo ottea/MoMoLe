@@ -85,13 +85,13 @@ public class MomoleDAO {
 
     public Momole getMomole(long id){
         open();
-        Cursor cursor = database.query(TBL_LM,TBL_B,TBL_N //TBL
+        Cursor cursor = database.query(TBL_LM, //TBL
                 ,null, //null returns all columns /fields
-                TBL_LM_ID, TBL_B_ID, TBL_N + "=?", // Selection (WHERE [field]=?)
+                TBL_LM_ID, + "=?", // Selection (WHERE [field]=?)
                 new String[]{String.valueOf(id)},
                 null,
-                null
-                null
+                null,
+                null,
                 null);
         if (cursor.moveToFirst()){
             return readFromCursor(cursor);
@@ -103,6 +103,7 @@ public class MomoleDAO {
 
     public List<Momole> getAllMomoleAfter (long timestamp){
         open();
-        Cursor cursor = database.query()
+        Cursor cursor = database.query(TBL_LM, //table
+        new String []// )
     }
 }
