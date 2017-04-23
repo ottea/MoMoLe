@@ -101,6 +101,9 @@ public class MomoleDAO {
         return null;
     }
 
+    private Momole readFromCursor(Cursor cursor) {
+    }
+
     public List<Momole> getAllMomoleAfter (long timestamp){
         open();
         Cursor cursor = database.query(TBL_LM, //table
