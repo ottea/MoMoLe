@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteDatabase;
 
 import java.util.List;
 
+import com.healthservices.mha.momole.database.model.Momole;
+
 /**
  * Created by manji on 23.04.2017.
  */
