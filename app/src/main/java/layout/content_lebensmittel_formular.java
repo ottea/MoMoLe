@@ -1,17 +1,16 @@
 package layout;
 
-import android.content.Context;
-import android.net.Uri;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import com.healthservices.mha.momole.R;
+import org.w3c.dom.Text;
 
 public class content_lebensmittel_formular extends Fragment {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,11 +21,8 @@ public class content_lebensmittel_formular extends Fragment {
             public void onClick(View v) {
                 String bezeichnung = ((TextView) findViewById(R.id.input_lebensmittel_bezeichnung)).getText().toString();
                 String uhrzeit = ((TextView) findViewById(R.id.input_lebensmittel_uhrzeit)).getText().toString();
-                String kategorie1 = ((TextView) findViewById(R.id.paymentInputCategory)).getText().toString();
-                double paid;
                 if (uhrzeit.length() != 0) {
                     try {
-                        paid = Double.parseDouble(amount);
                         Lebensmittel lebensmittel = new Lebensmittel();
                         lebensmittel.setBezeichnung(bezeichnung);
                         lebensmittel.setUhrzeit(uhrzeit);

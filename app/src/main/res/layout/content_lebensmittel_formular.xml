@@ -42,38 +42,83 @@
         android:layout_height="wrap_content"
         android:text="Speichern"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="402dp" />
+        tools:layout_editor_absoluteY="447dp" />
 
-    <CheckBox
-        android:id="@+id/checkBox"
+    <ImageButton
+        android:id="@+id/button_lebensmittel_allergen1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Allergen  1"
+        app:srcCompat="@drawable/ic_menu_gallery"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="203dp" />
+        tools:layout_editor_absoluteY="197dp" />
 
-    <CheckBox
-        android:id="@+id/checkBox2"
+    <ImageButton
+        android:id="@+id/button_lebensmittel_allergen2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Allergen 2"
+        app:srcCompat="@drawable/ic_menu_gallery"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="248dp" />
+        tools:layout_editor_absoluteY="254dp" />
 
-    <CheckBox
-        android:id="@+id/checkBox3"
+    <ImageButton
+        android:id="@+id/button_lebensmittel_allergen3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Allergen 3"
+        app:srcCompat="@drawable/ic_menu_gallery"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="293dp" />
+        tools:layout_editor_absoluteY="314dp" />
 
-    <CheckBox
-        android:id="@+id/checkBox4"
+    <ImageButton
+        android:id="@+id/button_lebensmittel_allergen4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_menu_gallery"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="376dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="264dp"
+        android:layout_height="44dp"
+        android:text="Allergen 1"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="265dp"
+        android:layout_height="43dp"
         android:text="Allergen 4"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="333dp" />
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="376dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="265dp"
+        android:layout_height="43dp"
+        android:text="Allergen 3"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="314dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="265dp"
+        android:layout_height="43dp"
+        android:text="Allergen 2"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="254dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="265dp"
+        android:layout_height="43dp"
+        android:text="Allergen 2"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="254dp" />
 
 </android.support.constraint.ConstraintLayout>
