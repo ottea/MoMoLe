@@ -26,8 +26,7 @@ public class content_lebensmittel_formular extends Fragment {
                         Lebensmittel lebensmittel = new Lebensmittel();
                         lebensmittel.setBezeichnung(bezeichnung);
                         lebensmittel.setUhrzeit(uhrzeit);
-                        lebensmittel.setTime(System.currentTimeMillis());
-                        PaymentDAO.getInstance(PaymentActivity.this).addPayment(payment);
+                        LebensmittelDAO.getInstance(content_lebensmittel_formular.this).addLebensmittel(Lebensmittel);
                         Toast.makeText(PaymentActivity.this, R.string.save_payment_message, Toast.LENGTH_SHORT).show();
                         finish();
                     } catch (NumberFormatException e) {
