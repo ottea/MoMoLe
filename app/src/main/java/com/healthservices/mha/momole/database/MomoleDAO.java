@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.util.List;
+
 /**
  * Created by manji on 23.04.2017.
  */
@@ -80,9 +82,9 @@ public class MomoleDAO {
 
     public Momole getMomole(long id){
         open();
-        Cursor cursor = database.query(TBL_LM, //TBL
+        Cursor cursor = database.query(TBL_LM,TBL_B,TBL_N //TBL
                 ,null, //null returns all columns /fields
-                TBL_LM_ID + "=?", // Selection (WHERE [field]=?)
+                TBL_LM_ID, TBL_B_ID, TBL_N + "=?", // Selection (WHERE [field]=?)
                 new String[]{String.valueOf(id)},
                 null,
                 null
@@ -96,4 +98,8 @@ public class MomoleDAO {
         return null;
     }
 
+    public List<Momole> getAllMomoleAfter (long timestamp){
+        open();
+        Cursor cursor = database.query()
+    }
 }
