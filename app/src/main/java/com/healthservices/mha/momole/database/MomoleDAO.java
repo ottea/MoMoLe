@@ -19,6 +19,14 @@ public class MomoleDAO {
 
     public static final String TBL_B = "beschwerden";
     public static final String TBL_B_ID = "id";
+    public static final String TBL_B_TSTMP = "tstmp";
+    public static final String TBL_B_AMOUNT = "amount";
+    public static final String TBL_B_CATEGORY = "category";
+
+    public static final String TBL_N = "notizen";
+    public static final String TBL_N_ID = "id";
+    public static final String TBL_N_TSTMP = "tspmp";
+    public static final String TBL_N_AMOUNT = "amount";
 
 
 }
