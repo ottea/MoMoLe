@@ -45,6 +45,55 @@ public class MomoleDAO {
             + TBL_N_TSTMP + " INTEGER NOT NULL, "
             + TBL_N_AMOUNT + " REAL NOT NULL";
 
+    private static MomoleDAO instance;
+    private DatabaseHelper dbHelper;
+    private SQLiteDatabase database;
 
+    public static MomoleDAO getInstance(Context context){
+        if (instance == null){
+            instance = new MomoleDAO(context);
+        }
+        return instance;
+    }
+
+    private MomoleDAO(Context context){
+        dbHelper = DatabaseHelper.getInstance(context);
+    }
+
+    public void open() throws SQLException{
+        database = dbHelper.getWritableDatabase();
+    }
+
+    public void close(){
+        dbHelper.close();
+    }
+
+    public void onCreate(SQLiteDatabase database){
+        database.execSQL(CREATE_TBL_LM);
+        database.execSQL(CREATE_TBL_B);
+        database.execSQL(CREATE_TBL_N);
+    }
+
+    public void onUpgrade(SQLiteDatabase database, int oldVersion int newVersion){
+
+    }
+
+    public Momole getMomole(long id){
+        open();
+        Cursor cursor = database.query(TBL_LM, //TBL
+                ,null, //null returns all columns /fields
+                TBL_LM_ID + "=?", // Selection (WHERE [field]=?)
+                new String[]{String.valueOf(id)},
+                null,
+                null
+                null
+                null);
+        if (cursor.moveToFirst()){
+            return readFromCursor(cursor);
+        }
+        cursor.close();
+        close();
+        return null;
+    }
 
 }
